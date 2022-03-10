@@ -1,14 +1,11 @@
-#include<stdio.h>
+ #include <stdio.h>
 /**
- * * main - Entry point
- * *
- * * puts -print declared char string to std output
- * *
- * * Return: Always 0 (Success)
- * */
+ *  * main - Entry point
+ *   *
+ *    * Return: Always 0 (Success)
+ *     */
 int main(void)
 {
-		puts("\"Programming is like building a multilingual puzzle");
-
-			return (0);
+	puts("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
 }
