@@ -2,12 +2,6 @@
 #include<time.h>
 #include<stdio.h>
 
-/**
- * main-prints the numbers
- *
- * Returns:always 0(Success)
- */
-
 int main(void)
 {
 		int n;
