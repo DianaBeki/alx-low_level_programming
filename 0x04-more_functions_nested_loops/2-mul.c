@@ -1,5 +1,3 @@
-
-  
 #include "main.h"
 /**
  * mul -  checks for checks for a digit (0 through 9).
