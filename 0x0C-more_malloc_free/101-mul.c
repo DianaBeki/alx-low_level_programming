@@ -1,32 +1,59 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - multiplies two positive numbers
- * @argc: n arguments
- * @argv: args
- * Return: int
+ * exit_x_error - print error message and exit of program
+ *
+ * Return: nothing.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(int argc, char *argv[])
+void exit_x_error(void)
 {
-unsigned long mul;
-int i, j;
-	if (argc != 3)
-	{ printf("Error\n");
-	exit(98); }
-	for (i = 1; i < argc; i++)
-	{
-		for (j = 0; argv[i][j] != '\0'; j++)
-		{
-			if (argv[i][j] > 57 || argv[i][j] < 48)
-			{  printf("Error\n");
-			exit(98); }
-		}
+        printf("Error\n");
+        exit(98);
+}
 
-	}
-	mul = atol(argv[1]) *  atol(argv[2]);
-	printf("%lu\n", mul);
-return (0);
+/**
+ * number_str_len - returns the length of string numbers or exit
+ *
+ * @string: pointer to string.
+ * Return: length of string.
+ */
+int number_str_len(char *string)
+{
+        int len = 0;
+
+        while (string[len])
+        {
+                if (string[len] < '0' || '9' < string[len])
+                        exit_x_error();
+                len++;
+        }
+        return (len);
+}
+
+/**
+ * print_number_string - print number of string
+ *
+ * @array_respuesta: pointer to string.
+ * @len: Length of the string
+ *
+ * Return: nothing.
+ */void print_number_string(char *array_respuesta, int len)
+{
+        char printed = 0;
+        int i;
+
+        for (i = 0; i < len; i++)
+                if (printed || ('0' < array_respuesta[i] && array_respuesta[i] <= '9'))
+                {
+                        _putchar(array_respuesta[i]);
+                        printed = 1;
+                }
+
+        if (!printed)
+                _putchar('0');
+        _putchar('\n');
 }
 
