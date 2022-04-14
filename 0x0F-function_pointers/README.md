@@ -23,7 +23,8 @@ Write a function that searches for an integer.
 - If no element matches, return -1
 - If size <= 0, return -1
 
-#### [ 3. A goal is not always meant to be reached, it often serves simply as something to aim at](3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h)
+#### [ 3. A goal is not always meant to be reached, it often serves simply as something to aim at]( 3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h)
+
 Write a program that performs simple operations.
 
 - You are allowed to use the standard library
