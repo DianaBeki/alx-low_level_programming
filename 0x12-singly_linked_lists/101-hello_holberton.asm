@@ -1,4 +1,4 @@
-      global    main
+       global    main
           extern    printf
 main:
 	  mov   edi, format
@@ -8,3 +8,4 @@ main:
 	  ret
 format: db `Hello, Holberton\n`,0
 © 2022 GitHub, Inc.
+Terms
